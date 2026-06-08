@@ -1,0 +1,37 @@
+{
+    "about": {
+        "title": "About me",
+        "subtitle": "More than just a programmer",
+        "trajectory": {
+            "title": "My journey",
+            "p1": "My career in software development began about 7 years ago, and since then I have dedicated myself to building and maintaining web applications with a strong focus on the backend. Throughout this time, I have worked with technologies like PHP, Laravel, Vue.js, React, SQL Server, MySQL, and PostgreSQL, among others.",
+            "p2": "Starting as a backend developer, I gradually expanded my skill set across the full stack, always seeking to understand how each piece fits together to deliver functional, efficient, and scalable solutions. I enjoy taking on new technical challenges that push me to keep learning and improving my craft."
+        },
+        "stack": {
+            "title": "My stack",
+            "categories": {
+                "backend": "Backend",
+                "frontend": "Frontend",
+                "database": "Database",
+                "tools": "Other techs"
+            },
+            "clickHere": "Click here to see all my projects created with {tech}."
+        },
+        "hobbies": {
+            "title": "My hobbies",
+            "music": "Music",
+            "videogames": "Video Games",
+            "basketball": "Basketball",
+            "pingpong": "Ping Pong",
+            "anime": "Anime",
+            "description": "Life isn't only about compiling code and optimization. When I step away from the keyboard, I immerse myself in creative activities, active sports, and gaming to keep my mind sharp and inspired.",
+            "descriptions": {
+                "music": "A constant companion that inspires me, nurtures my creativity, and allows me to connect with different cultures and emotions.",
+                "videogames": "A hobby that has been with me since childhood, helping me relax and unwind while keeping stress at bay.",
+                "basketball": "Basketball has been an important part of my youth, and I have greatly enjoyed playing and following the sport since my teenage years.",
+                "anime": "A hobby that has become part of who I am. I enjoy immersing myself in its stories, characters, and imaginative worlds.",
+                "pingpong": "My most recent hobby. I enjoy playing it with friends in a casual setting—not competitively, but simply for fun and good company."
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "common": {
+        "menu": {
+            "home": "Inicio",
+            "about": "Sobre mí",
+            "projects": "Mis proyectos",
+            "contact": "Contacto"
+        },
+        "footer": {
+            "allRightsReserved": "{year} {name} Todos los derechos reservados"
+        }
+    }
+}

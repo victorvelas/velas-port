@@ -1,0 +1,37 @@
+{
+    "about": {
+        "title": "Sobre mí",
+        "subtitle": "Más allá de un simple programador",
+        "trajectory": {
+            "title": "Mi trayectoria",
+            "p1": "Mi carrera en el desarrollo de software comenzó hace aproximadamente 7 años, y desde entonces me he dedicado a construir y mantener aplicaciones web con un fuerte enfoque en el backend. Durante este tiempo, he trabajado con tecnologías como PHP, Laravel, Vue.js, React, SQL Server, MySQL y PostgreSQL, entre otras.",
+            "p2": "Empecé como desarrollador backend y gradualmente expandí mi conjunto de habilidades a través del stack completo, siempre buscando entender cómo cada pieza encaja para ofrecer soluciones funcionales, eficientes y escalables. Disfruto asumir nuevos retos técnicos que me impulsan a seguir aprendiendo y mejorando mi oficio."
+        },
+        "stack": {
+            "title": "Mi stack",
+            "categories": {
+                "backend": "Backend",
+                "frontend": "Frontend",
+                "database": "Base de datos",
+                "tools": "Otras tecnologías"
+            },
+            "clickHere": "Click aqui para ver todos mis proyectos creados con {tech}."
+        },
+        "hobbies": {
+            "title": "Mis pasatiempos",
+            "music": "Música",
+            "videogames": "Videojuegos",
+            "basketball": "Baloncesto",
+            "pingpong": "Ping Pong",
+            "anime": "Anime",
+            "description": "No todo en la vida es programar y optimizar aplicaciones. Cuando estoy alejado del telcado, Me  I sumerjo en actividades recreativas, deportes, y juegos para mantener mi mente activa e inspirada.",
+            "descriptions": {
+                "music": "Una compañia que me inspira, fomenta mi creatividad y me permite conectar con diferentes culturas y emociones.",
+                "videogames": "Un pequeño pasatiempo que me ha acompañado desde mi infancia, me ayuda a relajarme y a no seder al estres.",
+                "basketball": "El baloncesto ha sido una parte importante de mi juventud, lo disfruto mucho desde mi adolescencia.",
+                "anime": "Un pasatiempo que se ha convertido en parte de mi identidad. Me encanta perderme en sus historias y mundos.",
+                "pingpong": "Mi pasatiempo mas reciente, disfruto jugarlo en compañia de mis amigos, no de forma competitiva, solo jugamos para divertirnos 😊."
+            }
+        }
+    }
+}
