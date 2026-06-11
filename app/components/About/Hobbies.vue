@@ -76,7 +76,7 @@ const toggleHobby = (id: string) => {
             <div class="h-px flex-1 bg-gradient-to-r from-gray-300/50 dark:from-white/15 to-transparent"></div>
         </div>
 
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mb-8 text-sm sm:text-base leading-relaxed">
+        <p class="text-gray-600 dark:text-gray-400 w-full mb-8 text-sm sm:text-base leading-relaxed">
             {{ $t('about.hobbies.description') }}
         </p>
 
@@ -120,7 +120,7 @@ const toggleHobby = (id: string) => {
                 <div class="w-full transition-all duration-500 origin-top lg:origin-right"
                     :class="activeHobbyId ? 'lg:w-[45%] opacity-100 scale-100 visible h-auto' : 'lg:w-0 opacity-0 scale-95 invisible h-0 lg:h-auto overflow-hidden'">
                     <div v-if="currentHobby"
-                        class="relative rounded-2xl border border-gray-300/40 dark:border-white/10 bg-white/80 dark:bg-bod-soft/60 backdrop-blur-md p-5 shadow-xl flex flex-col h-[350px] justify-between overflow-hidden group">
+                        class="relative rounded-2xl border border-gray-300/40 dark:border-white/10 bg-main-200/80 dark:bg-bod-soft/60 backdrop-blur-md p-5 shadow-xl flex flex-col h-[350px] justify-between overflow-hidden group">
 
                         <button @click="activeHobbyId = null"
                             class="absolute top-3 right-3 z-20 w-7 h-7 rounded-full bg-gray-200/50 dark:bg-white/10 flex items-center justify-center text-xs text-gray-500 dark:text-gray-400 hover:bg-red-500 hover:text-white transition-colors duration-200"
@@ -133,7 +133,7 @@ const toggleHobby = (id: string) => {
                             <img :src="currentHobby.gif" alt="Hobby Preview illustration"
                                 class="w-full h-full object-cover filter scale-105 group-hover:scale-100 transition-all duration-700 ease-out" />
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-white dark:from-[#0b0f19] via-transparent to-transparent">
+                                class="absolute inset-0 bg-gradient-to-t from-[#fffffffb] dark:from-[#0b0f19] via-transparent to-transparent">
                             </div>
                         </div>
 

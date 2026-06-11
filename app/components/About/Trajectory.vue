@@ -1,33 +1,8 @@
 <script lang="ts" setup>
-import { ref } from 'vue';
 import Piece from '~/components/web/Piece.vue';
+import { useStages, type TrajectorySegment } from '~/composables/forPages/useAboutMe';
 
-interface TrajectorySegment {
-    id: string;
-    phase: string;
-    titleKey: string;   // Localization key for the stage title (e.g., 'about.trajectory.stage1')
-    paraKey: string;    // Localization key for your text paragraph
-    meta: string;       // Contextual subtitle indicator (e.g., "CHAPTER I", "THE FOCUS")
-}
-
-const activeIndex = ref(0);
-
-const stages: TrajectorySegment[] = [
-    {
-        id: 'origin',
-        phase: '01',
-        titleKey: 'about.trajectory.stage1_title', // Fallback title string handles cleanly
-        paraKey: 'about.trajectory.p1',
-        meta: 'PHASE . O1 // THE FOUNDATION'
-    },
-    {
-        id: 'growth',
-        phase: '02',
-        titleKey: 'about.trajectory.stage2_title',
-        paraKey: 'about.trajectory.p2',
-        meta: 'PHASE . O2 // THE EVOLUTION'
-    }
-];
+const { activeIndex, setActiveIndex, stages, isActiveIndex } = useStages()
 </script>
 
 <template>
@@ -54,17 +29,17 @@ const stages: TrajectorySegment[] = [
                     <!-- LEFT SIDE: Architectural Vertical Control Track Dial -->
                     <div
                         class="flex flex-row md:flex-col justify-start gap-4 md:gap-6 border-b md:border-b-0 md:border-r border-gray-200 dark:border-white/10 pb-4 md:pb-0 md:pr-8 shrink-0">
-                        <button v-for="(stage, idx) in stages" :key="stage.id" @click.prevent="activeIndex = idx"
-                            class="group flex items-center gap-4 text-left transition-all duration-300 relative py-1"
-                            role="tab" :aria-selected="activeIndex === idx">
+                        <button v-for="(stage, idx) in stages" :key="stage.id" @click.prevent="setActiveIndex(idx)"
+                            class="group flex items-center gap-4 text-left transition-all duration-300 relative py-1 cursor-pointer"
+                            role="tab" :aria-selected="isActiveIndex(idx)">
                             <!-- Active Highlight Line Accent Bar (Desktop only) -->
                             <div class="absolute -right-[33px] top-1/2 -translate-y-1/2 w-[2px] h-8 bg-main-500 hidden md:block transition-all duration-300 origin-center"
-                                :class="activeIndex === idx ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'">
+                                :class="isActiveIndex(idx) ? 'opacity-100 scale-y-100' : 'opacity-0 scale-y-0 pointer-events-none'">
                             </div>
 
                             <!-- Index Circular Node Identifier -->
                             <div class="h-10 w-10 rounded-xl border flex items-center justify-center font-mono text-sm font-bold transition-all duration-500"
-                                :class="activeIndex === idx
+                                :class="isActiveIndex(idx)
                                     ? 'bg-main-500 text-white border-main-500 shadow-lg shadow-main-500/20 scale-105'
                                     : 'bg-transparent text-gray-400 dark:text-gray-500 border-gray-300/60 dark:border-white/10 group-hover:border-gray-400 dark:group-hover:border-white/30 group-hover:text-gray-700 dark:group-hover:text-gray-300'">
                                 {{ stage.phase }}
@@ -73,12 +48,12 @@ const stages: TrajectorySegment[] = [
                             <!-- Text Label attached next to step indicator (Hidden on mobile for micro layout beauty) -->
                             <div class="hidden md:flex flex-col select-none">
                                 <span class="text-xs font-mono font-bold tracking-widest transition-colors duration-300"
-                                    :class="activeIndex === idx ? 'text-main-600 dark:text-main-400' : 'text-gray-400 dark:text-gray-500'">
-                                    STAGE
+                                    :class="isActiveIndex(idx) ? 'text-main-600 dark:text-main-400' : 'text-gray-400 dark:text-gray-500'">
+                                    {{ $t('about.trajectory.stage') }}
                                 </span>
                                 <span class="text-sm font-bold tracking-tight transition-colors duration-300"
-                                    :class="activeIndex === idx ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'">
-                                    {{ $t(stage.titleKey, idx === 0 ? 'My Beginnings' : 'Where I Am Now') }}
+                                    :class="isActiveIndex(idx) ? 'text-gray-900 dark:text-white' : 'text-gray-500 dark:text-gray-400'">
+                                    {{ $t(stage.titleKey) }}
                                 </span>
                             </div>
                         </button>
@@ -106,7 +81,9 @@ const stages: TrajectorySegment[] = [
                                     <div
                                         class="text-xs font-mono font-bold tracking-widest text-main-600 dark:text-main-400 flex items-center gap-2">
                                         <span class="h-1 w-1 rounded-full bg-main-500 animate-pulse"></span>
-                                        {{ (stages[activeIndex] as TrajectorySegment).meta }}
+                                        {{ $t((stages[activeIndex] as TrajectorySegment).meta, {
+                                            count: (activeIndex + 1).toString().padStart(2, '0')
+                                        }) }}
                                     </div>
 
                                     <!-- The Narrative Text Block -->
@@ -124,12 +101,12 @@ const stages: TrajectorySegment[] = [
                             <div class="flex gap-1">
                                 <div v-for="(_, i) in stages" :key="i"
                                     class="h-1 rounded-full transition-all duration-300"
-                                    :class="activeIndex === i ? 'w-6 bg-main-500' : 'w-2 bg-gray-200 dark:bg-white/10'">
+                                    :class="isActiveIndex(i) ? 'w-6 bg-main-500' : 'w-2 bg-gray-200 dark:bg-white/10'">
                                 </div>
                             </div>
                             <span
                                 class="text-[10px] font-mono font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 select-none">
-                                Interactive Journey Deck
+                                {{ $t('about.trajectory.interactiveJourneyDeck') }}
                             </span>
                         </div>
 

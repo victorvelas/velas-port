@@ -5,7 +5,17 @@
         "trajectory": {
             "title": "My journey",
             "p1": "My career in software development began about 7 years ago, and since then I have dedicated myself to building and maintaining web applications with a strong focus on the backend. Throughout this time, I have worked with technologies like PHP, Laravel, Vue.js, React, SQL Server, MySQL, and PostgreSQL, among others.",
-            "p2": "Starting as a backend developer, I gradually expanded my skill set across the full stack, always seeking to understand how each piece fits together to deliver functional, efficient, and scalable solutions. I enjoy taking on new technical challenges that push me to keep learning and improving my craft."
+            "p2": "Starting as a backend developer, I gradually expanded my skill set across the full stack, always seeking to understand how each piece fits together to deliver functional, efficient, and scalable solutions. I enjoy taking on new technical challenges that push me to keep learning and improving my craft.",
+            "foundationMetaTag": "PHASE . {count} // THE FOUNDATION",
+            "evolutionMetaTag": "PHASE . {count} // THE EVOLUTION",
+            "interactiveJourneyDeck": "Interactive Journey Deck",
+            "beginningStage": {
+                "title": "My Beginnings"
+            },
+            "Finalstage": {
+                "title": "Where I Am Now"
+            },
+            "stage": "STAGE"
         },
         "stack": {
             "title": "My stack",
