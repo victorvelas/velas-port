@@ -26,10 +26,10 @@ export const useRelevances = () => {
 
 export const useMetrics = () => {
     const { experienceYears } = useExperienceYears();
-    const metrics = [
+    const metrics = computed(() => [
         { value: `${experienceYears.value}+`, label: 'home.metrics.yearsCrafting' },
         { value: '40+', label: 'home.metrics.digitalProducts' },
         { value: '99%', label: 'home.metrics.deliveryRate' }
-    ];
+    ]);
     return { metrics };
 }
