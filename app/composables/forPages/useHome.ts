@@ -6,8 +6,8 @@ export const useRelevances = () => {
     const pillars = computed(() => [
         {
             icon: '✦',
-            titleTag: 'home.relevances.arcAndDesignt.title',
-            descTag: 'home.relevances.arcAndDesignt.description',
+            titleTag: 'home.relevances.arcAndDesign.title',
+            descTag: 'home.relevances.arcAndDesign.description',
         },
         {
             icon: '⚡',
