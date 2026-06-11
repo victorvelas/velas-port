@@ -1,34 +1,10 @@
 <script setup lang="ts">
 import Portrait from '~/components/Home/Portrait.vue';
-import { useExperienceYears } from '~/composables/useApplication';
+import { useMetrics, useRelevances } from '~/composables/forPages/useHome';
 
+const { metrics } = useMetrics();
+const { pillars } = useRelevances();
 
-const { experienceYears } = useExperienceYears();
-
-const metrics = [
-    { value: `${experienceYears.value}+`, label: 'Years Crafting Experiences' },
-    { value: '40+', label: 'Digital Products Shipped' },
-    { value: '99%', label: 'Success & Delivery Rate' }
-];
-
-// Structural focal pillars of your current work
-const pillars = [
-    {
-        icon: '✦',
-        title: 'Architecture & Design',
-        desc: 'Engineering high-fidelity, polished user interfaces wrapped in clean, maintainable systems code architectures.'
-    },
-    {
-        icon: '⚡',
-        title: 'Performance Optimization',
-        desc: 'Auditing and re-engineering system logic engines to hit near-instantaneous load and execution metrics.'
-    },
-    {
-        icon: '⎔',
-        title: 'Creative Technical Strategy',
-        desc: 'Translating complex client business concepts into seamless digital products that scale smoothly over time.'
-    }
-];
 </script>
 
 <template>
@@ -47,13 +23,12 @@ const pillars = [
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-main-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     </div>
-
                     <span
                         class="text-4xl md:text-5xl font-black tracking-tight text-main-600 dark:text-main-400 font-mono mb-2 block">
                         {{ metric.value }}
                     </span>
                     <span class="text-xs font-bold uppercase tracking-widest text-gray-500 dark:text-gray-400">
-                        {{ metric.label }}
+                        {{ $t(metric.label) }}
                     </span>
                 </div>
             </div>
@@ -86,25 +61,20 @@ const pillars = [
                         class="absolute right-4 top-4 text-4xl opacity-10 dark:opacity-[0.05] group-hover:scale-125 group-hover:text-main-500 group-hover:opacity-30 dark:group-hover:opacity-20 transition-all duration-500 pointer-events-none font-mono">
                         {{ pillar.icon }}
                     </div>
-
                     <div>
                         <!-- Monospaced numerical identity tracking element -->
                         <div
                             class="text-[10px] font-mono font-bold tracking-widest text-gray-400 dark:text-gray-500 mb-4 select-none">
                             MODULE // 0{{ idx + 1 }}
                         </div>
-
                         <h3
                             class="text-xl font-bold text-gray-900 dark:text-white tracking-tight mb-3 group-hover:text-main-600 dark:group-hover:text-main-400 transition-colors duration-300">
-                            {{ pillar.title }}
+                            {{ $t(pillar.titleTag) }}
                         </h3>
-
                         <p class="text-sm md:text-base text-gray-600 dark:text-gray-400 leading-relaxed font-normal">
-                            {{ pillar.desc }}
+                            {{ $t(pillar.descTag) }}
                         </p>
                     </div>
-
-                    <!-- Fancy bottom-anchored action track line element -->
                     <div
                         class="w-8 h-[2px] bg-gray-300 dark:bg-white/15 mt-6 group-hover:w-full group-hover:bg-main-500 transition-all duration-500 rounded-full">
                     </div>
@@ -116,14 +86,14 @@ const pillars = [
         <section class="container-site text-center pt-8">
             <div
                 class="relative inline-flex items-center gap-4 p-1 rounded-full border border-gray-200 dark:border-white/10 bg-white/60 dark:bg-bod-soft/40 backdrop-blur-md shadow-md">
-                <NuxtLink to="/projects"
+                <NuxtLinkLocale to="/my-projects"
                     class="px-6 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-main-500 text-white shadow-lg shadow-main-500/20 hover:bg-main-600 transition-all duration-300">
-                    Explore Projects
-                </NuxtLink>
-                <NuxtLink to="/about-me"
+                    {{ $t('home.exploreProjects') }}
+                </NuxtLinkLocale>
+                <NuxtLinkLocale to="/about-me"
                     class="px-5 py-2.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 mr-2">
-                    Read Full Journey →
-                </NuxtLink>
+                    {{ $t('home.readFullJourney') }} →
+                </NuxtLinkLocale>
             </div>
         </section>
 

@@ -1,6 +1,27 @@
 {
     "home": {
         "greeting": "Hello, I'm ",
-        "portraitSubtitle": "I build robust, scalable and user-centered web applications."
+        "portraitSubtitle": "I build robust, scalable and user-centered web applications.",
+        "relevances": {
+            "arcAndDesignt": {
+                "title": "Architecture & Design",
+                "description": "Engineering high-fidelity, polished user interfaces wrapped in clean, maintainable systems code architectures."
+            },
+            "performance": {
+                "title": "Performance Optimization",
+                "description": "Auditing and re-engineering system logic engines to hit near-instantaneous load and execution metrics."
+            },
+            "creativity": {
+                "title": "Creative Technical Strategy",
+                "description": "Translating complex client business concepts into seamless digital products that scale smoothly over time."
+            }
+        },
+        "metrics": {
+            "yearsCrafting": "Years Crafting Experiences",
+            "digitalProducts": "Digital Products Shipped",
+            "deliveryRate": "Success & Delivery Rate"
+        },
+        "exploreProjects": "Explore projects",
+        "readFullJourney": "Read full journey"
     }
 }
