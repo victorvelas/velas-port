@@ -1,6 +1,27 @@
 {
     "home": {
         "greeting": "Hola, soy ",
-        "portraitSubtitle": "Construyo aplicaciones web robustas, escalables y centradas al usuario."
+        "portraitSubtitle": "Construyo aplicaciones web robustas, escalables y centradas al usuario.",
+        "relevances": {
+            "arcAndDesign": {
+                "title": "Arquitectura y diseño",
+                "description": "Ingenieria de alta fidelidad, interfaces de usuario pulidas con arquitecturas de código limpias y mantenibles."
+            },
+            "performance": {
+                "title": "Optimización de rendimiento",
+                "description": "Auditoria y reingeniería de motores de lógica de sistemas para alcanzar métricas de carga y ejecución casi instantáneas."
+            },
+            "creativity": {
+                "title": "Estrategia técnica creativa",
+                "description": "Traducción de conceptos de negocio complejos de clientes en productos digitales fluidos que escalan suavemente con el tiempo."
+            }
+        },
+        "metrics": {
+            "yearsCrafting": "Años de experiencia",
+            "digitalProducts": "Productos digitales entregados",
+            "deliveryRate": "Tasa de éxito y entrega"
+        },
+        "exploreProjects": "Explorar proyectos",
+        "readFullJourney": "Lee mi viaje completo"
     }
 }
