@@ -5,7 +5,17 @@
         "trajectory": {
             "title": "Mi trayectoria",
             "p1": "Mi carrera en el desarrollo de software comenzó hace aproximadamente 7 años, y desde entonces me he dedicado a construir y mantener aplicaciones web con un fuerte enfoque en el backend. Durante este tiempo, he trabajado con tecnologías como PHP, Laravel, Vue.js, React, SQL Server, MySQL y PostgreSQL, entre otras.",
-            "p2": "Empecé como desarrollador backend y gradualmente expandí mi conjunto de habilidades a través del stack completo, siempre buscando entender cómo cada pieza encaja para ofrecer soluciones funcionales, eficientes y escalables. Disfruto asumir nuevos retos técnicos que me impulsan a seguir aprendiendo y mejorando mi oficio."
+            "p2": "Empecé como desarrollador backend y gradualmente expandí mi conjunto de habilidades a través del stack completo, siempre buscando entender cómo cada pieza encaja para ofrecer soluciones funcionales, eficientes y escalables. Disfruto asumir nuevos retos técnicos que me impulsan a seguir aprendiendo y mejorando mi oficio.",
+            "foundationMetaTag": "FASE . {count} // EL COMIENZO",
+            "evolutionMetaTag": "FASE . {count} // LA EVOLUCIÓN",
+            "interactiveJourneyDeck": "Cubierta de viaje interactiva",
+            "beginningStage": {
+                "title": "Mis inicios"
+            },
+            "finalStage": {
+                "title": "Donde estoy ahora"
+            },
+            "stage": "ETAPA"
         },
         "stack": {
             "title": "Mi stack",
@@ -24,7 +34,9 @@
             "basketball": "Baloncesto",
             "pingpong": "Ping Pong",
             "anime": "Anime",
-            "description": "No todo en la vida es programar y optimizar aplicaciones. Cuando estoy alejado del telcado, Me  I sumerjo en actividades recreativas, deportes, y juegos para mantener mi mente activa e inspirada.",
+            "altHobbyImg": "Previsualización ilustrativa de pasatiempo",
+            "closePreview": "Cerrar previsualización",
+            "description": "No todo en la vida es programar y optimizar aplicaciones. Cuando estoy alejado del teclado, Me sumerjo en actividades recreativas, deportes, y juegos para mantener mi mente activa e inspirada.",
             "descriptions": {
                 "music": "Una compañia que me inspira, fomenta mi creatividad y me permite conectar con diferentes culturas y emociones.",
                 "videogames": "Un pequeño pasatiempo que me ha acompañado desde mi infancia, me ayuda a relajarme y a no seder al estres.",
