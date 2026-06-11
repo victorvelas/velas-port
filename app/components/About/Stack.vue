@@ -1,55 +1,5 @@
 <script lang="ts" setup>
-import { computed } from 'vue';
-
-interface TechItem {
-    name: string;
-    icon: string;
-}
-
-interface StackCategory {
-    id: string;
-    key: string;
-    items: TechItem[];
-}
-
-const categories: StackCategory[] = [
-    {
-        id: 'backend',
-        key: 'backend',
-        items: [
-            { name: 'PHP', icon: 'php.svg' },
-            { name: 'Laravel', icon: 'laravel.svg' },
-        ],
-    },
-    {
-        id: 'frontend',
-        key: 'frontend',
-        items: [
-            { name: 'JavaScript', icon: 'javascript.svg' },
-            { name: 'TypeScript', icon: 'typescript.svg' },
-            { name: 'Vue.js', icon: 'vue.svg' },
-            { name: 'Nuxt', icon: 'nuxtjs.svg' },
-            { name: 'React', icon: 'react.svg' },
-            { name: 'Tailwind CSS', icon: 'tailwind.svg' },
-        ],
-    },
-    {
-        id: 'database',
-        key: 'database',
-        items: [
-            { name: 'PostgreSQL', icon: 'postgresql.svg' },
-            { name: 'MySQL', icon: 'mysql.svg' },
-            { name: 'SQL Server', icon: 'microsoftsqlserver.svg' },
-        ],
-    },
-    {
-        id: 'tools',
-        key: 'tools',
-        items: [
-            { name: 'Git', icon: 'git.svg' },
-        ],
-    },
-];
+import { categories } from '~/composables/forPages/useAboutMe';
 </script>
 
 <template>
