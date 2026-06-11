@@ -1,70 +1,8 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
 import Piece from '~/components/web/Piece.vue';
+import { useHobbies } from '~/composables/forPages/useAboutMe';
 
-interface Hobby {
-    id: string;
-    key: string;
-    gridClass: string;
-    gradient: string;
-    icon: string;
-    gif: string; // Path to your asset, e.g., /images/hobbies/videogames.gif
-}
-
-const activeHobbyId = ref<string | null>(null);
-
-const hobbies: Hobby[] = [
-    {
-        id: 'music',
-        key: 'about.hobbies.music',
-        gridClass: 'col-span-2 row-span-1',
-        gradient: 'from-violet-500/20 via-purple-500/5 to-transparent hover:border-purple-500/50',
-        icon: '🎵',
-        gif: '/images/about/music-hobbie.gif'
-    },
-    {
-        id: 'videogames',
-        key: 'about.hobbies.videogames',
-        gridClass: 'col-span-2 md:col-span-1 row-span-1 md:row-span-2',
-        gradient: 'from-cyan-500/20 via-blue-500/5 to-transparent hover:border-cyan-500/50',
-        icon: '🎮',
-        gif: '/images/about/videogames-hobbie.gif'
-    },
-    {
-        id: 'basketball',
-        key: 'about.hobbies.basketball',
-        gridClass: 'col-span-2 md:col-span-1 row-span-1',
-        gradient: 'from-orange-500/20 via-amber-500/5 to-transparent hover:border-orange-500/50',
-        icon: '🏀',
-        gif: '/images/about/basketball.gif'
-    },
-    {
-        id: 'pingpong',
-        key: 'about.hobbies.pingpong',
-        gridClass: 'col-span-2 row-span-1',
-        gradient: 'from-emerald-500/20 via-teal-500/5 to-transparent hover:border-emerald-500/50',
-        icon: '🏓',
-        gif: '/images/about/pingpong.gif'
-    },
-    {
-        id: 'anime',
-        key: 'about.hobbies.anime',
-        gridClass: 'col-span-2 md:col-span-1 row-span-1',
-        gradient: 'from-indigo-500/20 via-red-500/5 to-transparent hover:border-pink-500/50',
-        icon: '📺',
-        gif: '/images/about/anime-hobbie.gif'
-    },
-];
-
-const currentHobby = computed(() => hobbies.find(h => h.id === activeHobbyId.value));
-
-const toggleHobby = (id: string) => {
-    if (activeHobbyId.value === id) {
-        activeHobbyId.value = null; // Toggle off if clicked again
-    } else {
-        activeHobbyId.value = id;
-    }
-};
+const { hobbies, activeHobbyId, currentHobby, toggleHobby, setActiveHobbyId } = useHobbies();
 </script>
 
 <template>
@@ -122,15 +60,15 @@ const toggleHobby = (id: string) => {
                     <div v-if="currentHobby"
                         class="relative rounded-2xl border border-gray-300/40 dark:border-white/10 bg-main-200/80 dark:bg-bod-soft/60 backdrop-blur-md p-5 shadow-xl flex flex-col h-[350px] justify-between overflow-hidden group">
 
-                        <button @click="activeHobbyId = null"
+                        <button @click="setActiveHobbyId(null)"
                             class="absolute top-3 right-3 z-20 w-7 h-7 rounded-full bg-gray-200/50 dark:bg-white/10 flex items-center justify-center text-xs text-gray-500 dark:text-gray-400 hover:bg-red-500 hover:text-white transition-colors duration-200"
-                            title="Close Preview">
+                            :title="$t('about.hobbies.closePreview')">
                             ✕
                         </button>
 
                         <div
                             class="absolute inset-0 z-0 opacity-20 dark:opacity-15 group-hover:opacity-70 transition-opacity duration-500">
-                            <img :src="currentHobby.gif" alt="Hobby Preview illustration"
+                            <img :src="currentHobby.gif" :alt="$t('about.hobbies.altHobbyImg')"
                                 class="w-full h-full object-cover filter scale-105 group-hover:scale-100 transition-all duration-700 ease-out" />
                             <div
                                 class="absolute inset-0 bg-gradient-to-t from-[#fffffffb] dark:from-[#0b0f19] via-transparent to-transparent">
