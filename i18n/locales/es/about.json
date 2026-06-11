@@ -12,7 +12,7 @@
             "beginningStage": {
                 "title": "Mis inicios"
             },
-            "Finalstage": {
+            "finalStage": {
                 "title": "Donde estoy ahora"
             },
             "stage": "ETAPA"
@@ -34,7 +34,7 @@
             "basketball": "Baloncesto",
             "pingpong": "Ping Pong",
             "anime": "Anime",
-            "description": "No todo en la vida es programar y optimizar aplicaciones. Cuando estoy alejado del telcado, Me sumerjo en actividades recreativas, deportes, y juegos para mantener mi mente activa e inspirada.",
+            "description": "No todo en la vida es programar y optimizar aplicaciones. Cuando estoy alejado del teclado, Me sumerjo en actividades recreativas, deportes, y juegos para mantener mi mente activa e inspirada.",
             "descriptions": {
                 "music": "Una compañia que me inspira, fomenta mi creatividad y me permite conectar con diferentes culturas y emociones.",
                 "videogames": "Un pequeño pasatiempo que me ha acompañado desde mi infancia, me ayuda a relajarme y a no seder al estres.",

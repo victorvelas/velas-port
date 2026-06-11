@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import Piece from '~/components/web/Piece.vue';
-import { useStages, type TrajectorySegment } from '~/composables/forPages/useAboutMe';
+import { useStages } from '~/composables/forPages/useAboutMe';
 
-const { activeIndex, setActiveIndex, stages, isActiveIndex } = useStages()
+const { activeIndex, setActiveIndex, stages, isActiveIndex, currentStage } = useStages()
 </script>
 
 <template>
@@ -81,7 +81,7 @@ const { activeIndex, setActiveIndex, stages, isActiveIndex } = useStages()
                                     <div
                                         class="text-xs font-mono font-bold tracking-widest text-main-600 dark:text-main-400 flex items-center gap-2">
                                         <span class="h-1 w-1 rounded-full bg-main-500 animate-pulse"></span>
-                                        {{ $t((stages[activeIndex] as TrajectorySegment).meta, {
+                                        {{ currentStage && $t(currentStage.meta, {
                                             count: (activeIndex + 1).toString().padStart(2, '0')
                                         }) }}
                                     </div>
@@ -89,7 +89,7 @@ const { activeIndex, setActiveIndex, stages, isActiveIndex } = useStages()
                                     <!-- The Narrative Text Block -->
                                     <p
                                         class="text-gray-700 dark:text-gray-300 text-base sm:text-lg leading-relaxed font-normal tracking-wide">
-                                        {{ $t((stages[activeIndex] as TrajectorySegment).paraKey) }}
+                                        {{ currentStage && $t(currentStage.paraKey) }}
                                     </p>
                                 </div>
                             </transition>

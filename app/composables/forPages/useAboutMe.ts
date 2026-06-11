@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 export interface TrajectorySegment {
     id: string;
@@ -22,7 +22,7 @@ export const useStages = () => {
         {
             id: 'growth',
             phase: '02',
-            titleKey: 'about.trajectory.Finalstage.title',
+            titleKey: 'about.trajectory.finalStage.title',
             paraKey: 'about.trajectory.p2',
             meta: 'about.trajectory.evolutionMetaTag'
         }
@@ -36,10 +36,13 @@ export const useStages = () => {
         return activeIndex.value === index;
     }
 
+    const currentStage = computed((): TrajectorySegment => (stages[activeIndex.value] as TrajectorySegment));
+
     return {
         activeIndex,
         stages,
         setActiveIndex,
-        isActiveIndex
+        isActiveIndex,
+        currentStage
     }
 }
