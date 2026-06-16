@@ -1,6 +1,14 @@
 <script setup lang="ts">
+import { useHead } from '#app';
+import { useI18n } from 'vue-i18n';
 import Portrait from '~/components/Home/Portrait.vue';
 import { useMetrics, useRelevances } from '~/composables/forPages/useHome';
+
+const { t } = useI18n();
+
+useHead({
+    title: t('home.title')
+})
 
 const { metrics } = useMetrics();
 const { pillars } = useRelevances();

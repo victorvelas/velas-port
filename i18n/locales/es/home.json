@@ -1,5 +1,6 @@
 {
     "home": {
+        "title": "Inicio",
         "greeting": "Hola, soy ",
         "portraitSubtitle": "Construyo aplicaciones web robustas, escalables y centradas al usuario.",
         "relevances": {
