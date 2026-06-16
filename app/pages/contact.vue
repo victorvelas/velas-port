@@ -20,7 +20,22 @@ useHead({
         />
         <div class="container-site">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 ">
-                <div></div>
+                <div class="flex justify-center">
+                    <div class="w-8/10">
+                        <hr class="bt-0 border light:border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
+                        <p>
+                            {{ $t('contact.column.baseMessage') }}
+                        </p>
+                        <p>
+                            {{ $t('contact.column.secondaryMessage') }}
+                        </p>
+                        <ul>
+                            <li>Build something</li>
+                            <li>Hire me</li>
+                            <li>Let's chat</li>
+                        </ul>
+                    </div>
+                </div>
                 <div>
                     <ContactForm />
                 </div>

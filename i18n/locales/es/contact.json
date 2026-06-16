@@ -8,6 +8,10 @@
             "subject": "Asunto",
             "message": "Mensaje",
             "submit": "Enviar"
+        },
+        "column": {
+            "baseMessage": "Si lo deseas, puedes enviarme un mensaje con el siguiente formulario. Hare lo posible por responderte a la brevedad. Estaré encantado de ayudarte.",
+            "secondaryMessage": ""
         }
     }
 }
