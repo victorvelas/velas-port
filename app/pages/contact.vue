@@ -31,15 +31,15 @@ useHead({
                                 {{ $t('contact.column.letsTalk') }}
                             </span>
                         </h2>
-                        <hr class="bt-0 border light:border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
+                        <hr class="bt-0 border-t border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
                         <p class="dark:text-gray-300">
                             {{ $t('contact.column.baseMessage') }}
                         </p>
-                        <hr class="bt-0 border light:border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
+                        <hr class="bt-0 border-t border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
                         <p class="dark:text-gray-300">
                             {{ $t('contact.column.secondaryMessage') }}
                         </p>
-                        <hr class="bt-0 border light:border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
+                        <hr class="bt-0 border-t border-bod/5 dark:border-bol/10 mb-6 mt-6"/>
                         <ul class="mb-6 flex mt-6 block gap-4 justify-center ">
                             <li class="flex-1 sm:flex-0 flex">
                                 <a 

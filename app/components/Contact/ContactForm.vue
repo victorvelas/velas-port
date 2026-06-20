@@ -1,12 +1,19 @@
 <script lang="ts" setup>
+import { useContact } from '~/composables/forPages/useContact.js';
 import NuxtButton from '../web/NuxtButton.vue';
+
+const handleSubmit = async () => {
+    await useContact();
+}
+
 </script>
 
 <template>
     <section class="mb-5">
         <form 
             method="post"
-            class="w-14/15 md:w-5/6 m-auto gap-3 p-6 rounded-2xl border light:border-gray-200/90  dark:border-main-500 backdrop-blur-sm bg-white/3 min-h-[50vh] shadow-lg shadow-main-500/20"
+            class="w-14/15 md:w-5/6 m-auto gap-3 p-6 rounded-2xl border border-gray-200/90 dark:border-main-500 backdrop-blur-sm bg-white/3 min-h-[50vh] shadow-lg shadow-main-500/20"
+            @submit.prevent="handleSubmit"            
         >
             <div>
                 <label for="name" class="mb-1 block">{{ $t('contact.form.name') }}:</label>
@@ -21,7 +28,7 @@ import NuxtButton from '../web/NuxtButton.vue';
             <div>
                 <label for="email" class="mb-1 block">{{ $t('contact.form.email') }}:</label>
                 <input 
-                    type="text" 
+                    type="email" 
                     name="email" 
                     id="email" 
                     class="block border light:border-bod/8 dark:border-bol/30 light:bg-bod/1 dark:bg-bol/2 focus:border-main-400 duration-200 outline-0 w-full mb-3 py-2 px-3 rounded-lg"
