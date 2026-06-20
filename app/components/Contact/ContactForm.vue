@@ -48,9 +48,14 @@ import NuxtButton from '../web/NuxtButton.vue';
                 ></textarea>
             </div>
             <div>
-                <NuxtButton type="submit">
+                <NuxtButton type="submit" class="w-full">
                     {{ $t('contact.form.submit') }}
                 </NuxtButton>
+            </div>
+            <div class="mt-3 block w-full">
+                <small class="text-center w-full block dark:text-gray-300">
+                    {{ $t('contact.form.note') }}
+                </small>
             </div>
         </form>
     </section>

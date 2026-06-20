@@ -7,11 +7,13 @@
             "email": "E-mail",
             "subject": "Subject",
             "message": "Message",
-            "submit": "Submit"
+            "submit": "Submit",
+            "note": "This form will not be used to sell, share, or trade your information with any third party. The privacy of your data is important to me."
         },
         "column": {
+            "letsTalk": "Lets Talk",
             "baseMessage": "If you wish, you can send me a message with the next form. I'll do my best to get back to you as soon as possible. I'll be happy to help you.",
-            "secondaryMessage": ""
+            "secondaryMessage": "I usually respond within 24 to 48 hours, so you won't be left waiting for long. In the meantime, make sure your email address is correct so my reply reaches you safely. Looking forward to hearing from you and collaborating on something great together!"
         }
     }
 }
