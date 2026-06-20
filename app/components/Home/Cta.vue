@@ -10,7 +10,8 @@ const handleNavigation = (pathDestiny: string) => {
 </script>
 <template>
     <div class="flex gap-1 justify-center md:justify-start">
-        <NuxtButton variant="main" @click.prevent="handleNavigation('/about-me')">{{ $t('common.menu.about') }}
+        <NuxtButton variant="main" @click.prevent="handleNavigation('/about-me')" class="cursor-pointer">
+            {{ $t('common.menu.about') }}
         </NuxtButton>
     </div>
 </template>

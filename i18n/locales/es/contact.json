@@ -1,1 +1,19 @@
-{}
+{
+    "contact": {
+        "title": "Contacto",
+        "subtitle": "¿Tienes alguna pregunta o quieres proponer una colaboración? ¡Escríbeme!",
+        "form": {
+            "name": "Nombre",
+            "email": "Correo electrónico",
+            "subject": "Asunto",
+            "message": "Mensaje",
+            "submit": "Enviar",
+            "note": "Este formulario no se usara para vender, compartir, o negociar tu información con ningun tercero. La privacidad de tus datos es importante para mi."
+        },
+        "column": {
+            "letsTalk": "Hablemos",
+            "baseMessage": "Si lo deseas, puedes enviarme un mensaje con el siguiente formulario. Hare lo posible por responderte a la brevedad. Estaré encantado de ayudarte.",
+            "secondaryMessage": "Normalmente respondo en un plazo de 24 a 48 horas, así que no tendrás que esperar mucho. Mientras tanto, asegúrate de que tu dirección de correo electrónico sea correcta para que mi respuesta llegue sin problemas. ¡Estoy deseando saber de ti y colaborar en algo genial juntos!"
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<script lang="ts" setup>
+import { useContact } from '~/composables/forPages/useContact.js';
+import NuxtButton from '../web/NuxtButton.vue';
+
+const handleSubmit = async () => {
+    await useContact();
+}
+
+</script>
+
+<template>
+    <section class="mb-5">
+        <form 
+            method="post"
+            class="w-14/15 md:w-5/6 m-auto gap-3 p-6 rounded-2xl border border-gray-200/90 dark:border-main-500 backdrop-blur-sm bg-white/3 min-h-[50vh] shadow-lg shadow-main-500/20"
+            @submit.prevent="handleSubmit"            
+        >
+            <div>
+                <label for="name" class="mb-1 block">{{ $t('contact.form.name') }}:</label>
+                <input 
+                    type="text" 
+                    name="name" 
+                    id="name" 
+                    class="block border light:border-bod/8 dark:border-bol/30 light:bg-bod/1 dark:bg-bol/2 focus:border-main-400 duration-200 outline-0 w-full mb-3 py-2 px-3 rounded-lg"
+                    autocomplete="off"
+                />
+            </div>
+            <div>
+                <label for="email" class="mb-1 block">{{ $t('contact.form.email') }}:</label>
+                <input 
+                    type="email" 
+                    name="email" 
+                    id="email" 
+                    class="block border light:border-bod/8 dark:border-bol/30 light:bg-bod/1 dark:bg-bol/2 focus:border-main-400 duration-200 outline-0 w-full mb-3 py-2 px-3 rounded-lg"
+                    autocomplete="off"
+                />
+            </div>
+            <div>
+                <label for="subject" class="mb-1 block">{{ $t('contact.form.subject') }}:</label>
+                <input 
+                    type="text" 
+                    name="subject" 
+                    id="subject" 
+                    class="block border light:border-bod/8 dark:border-bol/30 light:bg-bod/1 dark:bg-bol/2 focus:border-main-400 duration-200 outline-0 w-full mb-3 py-2 px-3 rounded-lg"
+                    autocomplete="off"
+                />
+            </div>
+            <div>
+                <label for="message" class="mb-1 block">{{ $t('contact.form.message') }}:</label>
+                <textarea 
+                    name="message" 
+                    id="message" 
+                    class="block border light:border-bod/8 dark:border-bol/30 light:bg-bod/1 dark:bg-bol/2 focus:border-main-400 duration-200 outline-0 w-full mb-3 py-2 px-3 rounded-lg"
+                    rows="8"
+                ></textarea>
+            </div>
+            <div>
+                <NuxtButton type="submit" class="w-full">
+                    {{ $t('contact.form.submit') }}
+                </NuxtButton>
+            </div>
+            <div class="mt-3 block w-full">
+                <small class="text-center w-full block dark:text-gray-300">
+                    {{ $t('contact.form.note') }}
+                </small>
+            </div>
+        </form>
+    </section>
+</template> 
