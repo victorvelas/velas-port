@@ -11,25 +11,16 @@
             "note": "This form will not be used to sell, share, or trade your information with any third party. The privacy of your data is important to me.",
             "fields": {
                 "name": {
-                    "placeholder": "Enter yout name...",
-                    "errors": {
-                        "required": "Name is required"
-                    }
+                    "placeholder": "Enter your name..."
                 },
                 "email": {
-                    "placeholder": "Enter your Email address...",
-                    "errors": {
-                        "emailFormat": "Email is invalid"
-                    }
+                    "placeholder": "Enter your Email address..."
                 },
                 "subject": {
                     "placeholder": "Enter a subject..."
                 },
                 "message": {
-                    "placeholder": "Enter your message...",
-                    "errors": {
-                        "required": "Message is required"
-                    }
+                    "placeholder": "Enter your message..."
                 }
             }
         },
