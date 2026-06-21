@@ -1,17 +1,17 @@
 export type TechStackType = {
-    name: String,
-    icon?: String,
+    name: string,
+    icon?: string,
 };
 
 export type ProjectType = {
-    name: String,
-    slug?: String,
-    githubUrl: String,
-    url: String | null,
-    description: String,
+    name: string,
+    slug?: string,
+    githubUrl: string,
+    url: string | null,
+    description: string,
     techStack: TechStackType[],
-    portrait: String | null,
-    images: String[],
+    portrait: string | null,
+    images: string[],
 }
 
 export const placeholderProjects: ProjectType[] = [

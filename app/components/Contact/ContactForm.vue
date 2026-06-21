@@ -1,10 +1,11 @@
 <script lang="ts" setup>
 import { useContact, type ContactData } from '~/composables/forPages/useContact.js';
 import NuxtButton from '../web/NuxtButton.vue';
-import { computed, reactive, ref } from 'vue';
+import { reactive } from 'vue';
 import TsInput from '../web/form/TsInput.vue';
 import TsTextarea from '../web/form/TsTextarea.vue';
 import { useI18n } from 'vue-i18n';
+import { checkRequired, checkValidEmail } from '~/utils/validators.js';
 
 const { t } = useI18n();
 
@@ -22,8 +23,8 @@ const handleSubmit = async () => {
 const form = useContact(contactInfo, handleSubmit);
 
 const validateEmail = (value:string) => {
-    const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return pattern.test(value) ? undefined : t('contact.form.fields.email.errors.emailFormat');
+    if (checkRequired(value)) return t('common.validations.required', { field: t('contact.form.email') });
+    return checkValidEmail(value) ? t('common.validations.email', { field: t('contact.form.email') }) : undefined;
 }
 
 </script>
@@ -37,7 +38,7 @@ const validateEmail = (value:string) => {
         >
             <div>
                 <form.Field name="name" :validators="{
-                    onChange: ({value}) => value.trim() === '' ? t('contact.form.fields.name.errors.required') : undefined
+                    onChange: ({value}) => checkRequired(value) ? t('common.validations.required', { field: t('contact.form.name') }) : undefined
                 }">
                     <template v-slot="{ field }">
                         <div>
@@ -55,7 +56,7 @@ const validateEmail = (value:string) => {
                 </form.Field>
             </div>
             <div>
-                <form.Field :form="form" name="email" :validators="{
+                <form.Field name="email" :validators="{
                     onChange: ({value}) => validateEmail(value)
                 }">
                     <template v-slot="{ field }">
@@ -72,7 +73,7 @@ const validateEmail = (value:string) => {
                 </form.Field>
             </div>
             <div>
-                <form.Field :form="form" name="subject">
+                <form.Field name="subject">
                     <template v-slot="{ field }">
                         <label :for="field.name" class="mb-1 block">{{ $t('contact.form.subject') }}:</label>
                         <TsInput :field="field" :id="field.name" :placeholder="$t(`contact.form.fields.${field.name}.placeholder`)" />
@@ -80,8 +81,8 @@ const validateEmail = (value:string) => {
                 </form.Field>
             </div>
             <div>
-                <form.Field :form="form" name="message" :validators="{
-                    onChange: ({value}) => value.trim() === '' ? t('contact.form.fields.message.errors.required') : undefined
+                <form.Field name="message" :validators="{
+                    onChange: ({value}) => value.trim() === '' ? t('common.validations.required', { field: t('contact.form.message') }) : undefined
                 }">
                     <template v-slot="{ field }">
                         <div>

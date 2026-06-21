@@ -17,7 +17,7 @@ export const useContact = (formData: ContactData|null = null, handleSubmit: (val
             message: ''
         } as ContactData),
         onSubmit: async ({ value }) => {
-            handleSubmit(value);
+            await handleSubmit(value);
             console.log(value)
         },
     })

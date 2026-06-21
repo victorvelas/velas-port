@@ -8,6 +8,10 @@
         },
         "footer": {
             "allRightsReserved": "{year} {name} All rights reserved"
+        },
+        "validations": {
+            "required": "{field} is required",
+            "email": "{field} is invalid"
         }
     }
 }
