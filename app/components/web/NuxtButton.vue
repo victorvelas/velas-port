@@ -12,10 +12,10 @@ type VariantType = {
 };
 
 const variants: VariantType = {
-    main: "bg-main-500 hover:bg-main-600",
-    secondary: "bg-gray-600 hover:bg-gray-700",
-    outline: "bg-transparent hover:bg-main-500",
-    ghost: "bg-transparent hover:bg-gray-500"
+    main: "bg-main-500 border-main-500 hover:bg-main-600 disabled:bg-main-500/40 disabled:border-main-500/20",
+    secondary: "bg-gray-600 border-gray-500 hover:bg-gray-700",
+    outline: "bg-transparent border-main-500 hover:bg-transparent",
+    ghost: "bg-transparent border-gray-500 hover:bg-gray-500"
 };
 const sizes: VariantType = {
     sm: 'py-[3px] px-[14px]',
@@ -34,7 +34,7 @@ const buttonSizes = computed((): string => getCompute(sizes, props.size));
 
 <template>
     <button type="button"
-        :class="['rounded-lg transition duration-300 border-2 border-main-500 text-white', props.strong ? 'font-bold' : '', buttonSizes, buttonVariants]">
+        :class="['rounded-lg transition duration-300 border-2 text-white disabled:cursor-not-allowed', props.strong ? 'font-bold' : '', buttonSizes, buttonVariants]">
         <slot />
     </button>
 </template>
