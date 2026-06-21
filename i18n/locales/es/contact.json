@@ -8,7 +8,30 @@
             "subject": "Asunto",
             "message": "Mensaje",
             "submit": "Enviar",
-            "note": "Este formulario no se usara para vender, compartir, o negociar tu información con ningun tercero. La privacidad de tus datos es importante para mi."
+            "note": "Este formulario no se usara para vender, compartir, o negociar tu información con ningun tercero. La privacidad de tus datos es importante para mi.",
+            "fields": {
+                "name": {
+                    "placeholder": "Ingresa tu nombre...",
+                    "errors": {
+                        "required": "Nombre es obligatorio"
+                    }
+                },
+                "email": {
+                    "placeholder": "Ingresa tu correo electrónico...",
+                    "errors": {
+                        "emailFormat": "Correo inválido"
+                    }
+                },
+                "subject": {
+                    "placeholder": "Ingresa un asunto..."
+                },
+                "message": {
+                    "placeholder": "Ingresa tu mensaje...",
+                    "errors": {
+                        "required": "Mensaje es obligatorio"
+                    }
+                }
+            }
         },
         "column": {
             "letsTalk": "Hablemos",
