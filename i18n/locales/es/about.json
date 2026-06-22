@@ -19,13 +19,20 @@
         },
         "stack": {
             "title": "Mi stack",
+            "description": "Una selección de herramientas y frameworks que domino para construir software de extremo a extremo. Mi enfoque está en combinar arquitecturas de servidor robustas con interfaces de usuario intuitivas y de alto rendimiento, garantizando siempre las mejores prácticas y un desarrollo limpio.",
             "categories": {
                 "backend": "Backend",
                 "frontend": "Frontend",
                 "database": "Base de datos",
                 "tools": "Otras tecnologías"
             },
-            "clickHere": "Click aqui para ver todos mis proyectos creados con {tech}."
+            "clickHere": "Click aqui para ver todos mis proyectos creados con {tech}.",
+            "paragraphs": {
+                "backend": "El motor detrás de cada aplicación. Me enfoco en construir arquitecturas sólidas, APIs robustas y lógicas de negocio eficientes que garantizan la seguridad, la escalabilidad y el rendimiento óptimo del sistema desde el primer día.",
+                "frontend": "Donde la lógica se transforma en experiencia. Diseño y desarrollo interfaces de usuario interactivas, rápidas y totalmente adaptables. Mi prioridad es crear experiencias web fluidas, intuitivas y optimizadas tanto para el usuario como para los motores de búsqueda.",
+                "database": "El corazón de la información. Diseño y gestiono estructuras de datos relacionales asegurando la integridad, optimización de consultas y un almacenamiento eficiente. Modelar bases de datos limpias es clave para el rendimiento de cualquier plataforma.",
+                "tools": "El ecosistema que hace posible el desarrollo moderno. Herramientas esenciales que utilizo en mi día a día para automatizar tareas, asegurar el control de versiones y mantener un flujo de trabajo ágil, colaborativo y sin fricciones."
+            }
         },
         "hobbies": {
             "title": "Mis pasatiempos",
