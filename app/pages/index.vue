@@ -6,9 +6,7 @@ import { useMetrics, useRelevances } from '~/composables/forPages/useHome';
 
 const { t } = useI18n();
 
-useHead({
-    title: t('home.title')
-})
+useHead({ title: t('home.title') })
 
 const { metrics } = useMetrics();
 const { pillars } = useRelevances();
@@ -17,17 +15,12 @@ const { pillars } = useRelevances();
 
 <template>
     <div class="space-y-20 pb-24">
-
-        <!-- SECTION 1: Your High-Impact Portrait Hero Section -->
         <Portrait />
-
-        <!-- SECTION 2: Impact Metric Bar (Minimalist Luxury Proof Layer) -->
         <section class="container-site relative">
             <div
                 class="grid grid-cols-1 md:grid-cols-3 border border-gray-200 dark:border-white/10 rounded-2xl bg-white/40 dark:bg-bod-soft/20 backdrop-blur-md divide-y md:divide-y-0 md:divide-x divide-gray-200 dark:divide-white/10 shadow-lg shadow-gray-200/20 dark:shadow-none overflow-hidden">
                 <div v-for="(metric, idx) in metrics" :key="idx"
                     class="p-6 md:p-8 text-center md:text-left flex flex-col justify-center relative group">
-                    <!-- Subtle interactive corner ambient accent glow -->
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-main-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
                     </div>
@@ -41,10 +34,7 @@ const { pillars } = useRelevances();
                 </div>
             </div>
         </section>
-
-        <!-- SECTION 3: Featured Pillars / Focus Grid (What you build) -->
         <section class="container-site">
-            <!-- Section Title Component Alignment -->
             <div class="flex items-center gap-3 mb-10">
                 <div class="flex flex-col">
                     <span
@@ -59,8 +49,6 @@ const { pillars } = useRelevances();
                     class="h-px flex-1 bg-gradient-to-r from-gray-300/50 dark:from-white/15 to-transparent self-end mb-2">
                 </div>
             </div>
-
-            <!-- Bento-inspired Architectural Card Stack Grid Layout -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div v-for="(pillar, idx) in pillars" :key="idx"
                     class="relative p-6 md:p-8 rounded-2xl border border-gray-200/60 dark:border-white/5 bg-gradient-to-b from-gray-50 to-transparent dark:from-white/[0.02] dark:to-transparent flex flex-col justify-between group hover:border-main-500/30 dark:hover:border-main-500/20 hover:shadow-xl hover:shadow-gray-200/50 dark:hover:shadow-none transition-all duration-500 hover:-translate-y-1 overflow-hidden">
@@ -89,8 +77,6 @@ const { pillars } = useRelevances();
                 </div>
             </div>
         </section>
-
-        <!-- SECTION 4: Streamlined Call to Action Layer (Route Router) -->
         <section class="container-site text-center pt-8">
             <div
                 class="relative inline-flex items-center gap-4 p-1 rounded-full border border-gray-200 dark:border-white/10 bg-white/60 dark:bg-bod-soft/40 backdrop-blur-md shadow-md">
@@ -104,6 +90,5 @@ const { pillars } = useRelevances();
                 </NuxtLinkLocale>
             </div>
         </section>
-
     </div>
 </template>
