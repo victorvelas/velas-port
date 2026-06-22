@@ -33,7 +33,7 @@ import { categories } from '~/composables/forPages/useAboutMe';
                 </div>
                 <div class="lg:col-span-2">
                     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                        <NuxtLinkLocale v-for="tech in category.items" :key="tech.name" :to="`/my-projects?tech=${tech.name}`"
+                        <NuxtLinkLocale v-for="tech in category.items" :key="tech.name" :to="{ path: '/my-projects', query: { tech: tech.name } }"
                             :title="$t('about.stack.clickHere', { tech: tech.name })" class="group relative flex flex-col items-center justify-center p-6 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/50 dark:bg-bod-soft/20 hover:bg-white dark:hover:bg-bod-soft/40 backdrop-blur-sm transition-all duration-300 ease-out hover:-translate-y-1 hover:border-main-500/50 dark:hover:border-main-500/50 hover:shadow-xl hover:shadow-main-500/5">
                             <div class="absolute inset-0 bg-gradient-to-br from-main-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                         
@@ -41,7 +41,7 @@ import { categories } from '~/composables/forPages/useAboutMe';
                                 <img 
                                     :src="`/icons/about/${tech.icon}`" 
                                     :alt="`${tech.name} logo`"
-                                    class="h-full w-full object-contain filter opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_4px_12px_rgba(var(--color-main-500),0.2)] transition-all duration-300"
+                                    class="h-full w-full object-contain filter opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:drop-shadow-[0_4px_12px_color-mix(in_srgb,var(--color-main-500)_20%,transparent)] transition-all duration-300"
                                     loading="lazy" 
                                 />
                             </div>
