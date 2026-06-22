@@ -19,13 +19,20 @@
         },
         "stack": {
             "title": "My stack",
+            "description": "A selection of tools and frameworks I master to build end-to-end software. My focus is on combining robust server architectures with intuitive, high-performance user interfaces, always ensuring best practices and clean development.",
             "categories": {
                 "backend": "Backend",
                 "frontend": "Frontend",
                 "database": "Database",
                 "tools": "Other techs"
             },
-            "clickHere": "Click here to see all my projects created with {tech}."
+            "clickHere": "Click here to see all my projects created with {tech}.",
+            "paragraphs": {
+                "backend": "The engine behind every application. I focus on building solid architectures, robust APIs, and efficient business logic that ensure system security, scalability, and optimal performance from day one.",
+                "frontend": "Where logic transforms into experience. I design and develop interactive, fast, and fully adaptable user interfaces. My priority is to create seamless, intuitive web experiences optimized for both users and search engines.",
+                "database": "The heart of information. I design and manage relational data structures, ensuring integrity, query optimization, and efficient storage. Designing clean databases is key to any platform's performance.",
+                "tools": "The ecosystem that makes modern development possible. Essential tools I use daily to automate tasks, ensure version control, and maintain an agile, collaborative, and frictionless workflow."
+            }
         },
         "hobbies": {
             "title": "My hobbies",

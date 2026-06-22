@@ -14,7 +14,7 @@ const { hobbies, activeHobbyId, currentHobby, toggleHobby, setActiveHobbyId } = 
             <div class="h-px flex-1 bg-gradient-to-r from-gray-300/50 dark:from-white/15 to-transparent"></div>
         </div>
 
-        <p class="text-gray-600 dark:text-gray-400 w-full mb-8 text-sm sm:text-base leading-relaxed">
+        <p class="text-gray-600 dark:text-gray-400 w-full mb-8 text-sm sm:text-base md:text-lg leading-relaxed">
             {{ $t('about.hobbies.description') }}
         </p>
 
